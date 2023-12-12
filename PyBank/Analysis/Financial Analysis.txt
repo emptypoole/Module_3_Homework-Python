@@ -1,6 +1,6 @@
 Financial Analysis 
 _____________________
- Total Number of Months: 86
+Total Number of Months: 86
 The Total Profit/Loss is: $22564198
 The Average Change is: -8214.47
 The Greatest Increase in Profits was in Mar-13 with $1141840
