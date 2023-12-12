@@ -39,22 +39,13 @@ for value in range(len(profit_loss)-1):
 
 average_change = round((sum(month_to_month_profit_loss) / number_of_months), 2)
 
-print("Financial Analysis")
-print("_____________________")
+financial_analysis_output_file = os.path.join("Analysis", "Financial Analysis.txt")
 
-print(" Total Number of Months: " + str(number_of_months))
-print("The Total Profit/Loss is: $" + str(total_profit_losses))
-print("The Average Change is: " + str(average_change))
-print("The Greatest Increase in Profits was in " + str(greatest_profit_month) + " with $" + str(greatest_profit_increase))
-print("The Greatest Decrease in Profits was in " + str(greatest_profit_decrease_month) + " with S" + str(greatest_profit_decrease))
-
-financial_analysis_output_file = os.path.join("..", "Analysis", "Financial Analysis.txt")
-
-with open("Financial Analysis.txt", "w") as f:
-    f.write("Financial Analysis")
-    f.write("_____________________")
-    f.write(" Total Number of Months: " + str(number_of_months))
-    f.write("The Total Profit/Loss is: $" + str(total_profit_losses))
-    f.write("The Average Change is: " + str(average_change))
-    f.write("The Greatest Increase in Profits was in " + str(greatest_profit_month) + " with $" + str(greatest_profit_increase))
-    f.write("The Greatest Decrease in Profits was in " + str(greatest_profit_decrease_month) + " with S" + str(greatest_profit_decrease))
+with open(financial_analysis_output_file, "w", encoding="utf-8") as f:
+    f.write("Financial Analysis \n")
+    f.write("_____________________\n")
+    f.write(" Total Number of Months: " + str(number_of_months) + "\n")
+    f.write("The Total Profit/Loss is: $" + str(total_profit_losses) + "\n")
+    f.write("The Average Change is: " + str(average_change) + "\n")
+    f.write("The Greatest Increase in Profits was in " + str(greatest_profit_month) + " with $" + str(greatest_profit_increase) + "\n")
+    f.write("The Greatest Decrease in Profits was in " + str(greatest_profit_decrease_month) + " with $" + str(greatest_profit_decrease))
